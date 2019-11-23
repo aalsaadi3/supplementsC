@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Home</title>
+
+<!--    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"/>-->
+<!--    <link rel="stylesheet" href="css/site.css"/>-->
+
+</head>
+<p xmlns:th="http://www.w3.org/1999/xhtml">&nbsp;</p>
+<div>
+    <h1>Supplements Inventory</h1>
+</div>
+<div>
+    <table style="width: 532px; height: 100px;">
+        <tbody>
+        <tr style="height: 20px;">
+            <td style="width: 126px; height: 20px;">Product ID</td>
+            <td style="width: 126px; height: 20px;">Product Name</td>
+            <td style="width: 126px; height: 20px;">Price</td>
+            <td style="width: 126px; height: 20px;">&nbsp;</td>
+        </tr>
+
+            <tr th:each="item: ${list}" th> <!-- th stands for table header -->
+                <td th:text="${item.product_id}">Product ID</td>
+                <td th:text="${item.product_name}">Product Name</td>
+                <td th:text="${item.price}">Price</td>
+                <td>
+<!--                    <button type="submit" id="sendToTransaction" value="Submit">Purchase</button>-->
+<!--                    <button type="submit" value="Submit" id="purchase">Purchase-->
+                        <a th:href="@{/purchase/__${item.product_id}__}" th:action="submit">Purchase</a>
+<!--                    </button>-->
+                </td>
+            </tr>
+        <tr>
+            <td>
+                <button type="submit" id="goToCustomer" value="Submit" formmethod="post">Next Page</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <p>&nbsp;</p>
+</div>
+<div>
+    <p>&nbsp;</p>
+</div>

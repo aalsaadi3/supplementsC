@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Receipt Page</title>
+
+    <!--    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"/>-->
+    <!--    <link rel="stylesheet" href="css/site.css"/>-->
+
+</head>
+<table style="width: 300px; height: 200px;">
+    <tbody>
+    <tr>
+        <td>Transaction ID</td>
+        <td th:value="${trans.transaction_id}"></td>
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Product Name</td>
+        <td th:value="${prod.product_name}"></td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td th:value="${prod.price}">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Total Cost</td>
+        <td th:value="${trans.total_cost}"></td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>

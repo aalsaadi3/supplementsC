@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Home</title>
+
+    <!--    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"/>-->
+    <!--    <link rel="stylesheet" href="css/site.css"/>-->
+
+</head>
+<p style="text-align: center;"><strong>Customer Details Page</strong></p>
+<p style="text-align: center;"><strong>&nbsp;</strong></p>
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong><span style="color: #00ccff;"><span
+        style="color: #99ccff;">Please Complete All Field Below</span></span></p>
+<p>&nbsp;</p>
+<!--Selected Product's ID: <output th:object="product_id" th:name="product_id" th:id="product_id" th:value="product_id"></output><br>-->
+<form action = "#" th:action="@{/finalize}" method="post" th:object="${order}" ><!--th:action="@{/finalize}"-->
+    <input type="hidden" name="product" th:value="${product.product_id}"> <!--This Worked! -->
+    Name: <input type="text" th:field="*{customerName}"><br>
+    Credit: <input type="text" th:field="*{creditCard}"><br>
+    Address <input type="text" th:field="*{address}"><br>
+    Zip: <input type="text" th:field="*{zip}"><br>
+<!--    <a th:href="@{/finalize}" th:action="submit" >Finalize Order</a>-->
+    <p><input type="submit" value="Submit" /></p>
+
+</form>
+
+<!--<form action="#" th:action="@{/finalize}" th:object="${order}" method="post">-->
+<!--    <p>Product ID <input type="hidden" th:field="*{product_id}" /></p>-->
+<!--    <p>Customer Name <input type="text" th:field="*{customerName}" /></p>-->
+<!--    <p>Credit Card <input type="text" th:field="*{creditCard}" /></p>-->
+<!--    <p>Address <input type="text" th:field="*{address}" /></p>-->
+<!--    <p>Zip <input type="text" th:field="*{zip}" /></p>-->
+<!--    <p><input type="submit" value="Submit" />Finalize Order</p>-->
+<!--</form>-->

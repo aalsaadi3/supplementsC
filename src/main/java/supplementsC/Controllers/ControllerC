@@ -1,0 +1,35 @@
+package supplementsC.Controllers;//package supplementsB.Controllers;
+//
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.ModelAttribute;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PostMapping;
+//
+//@Controller
+//public class ControllerC {
+//
+//    @GetMapping(path = "/transactionRequest")
+//    public String listTransactions(){
+//        return "transactionRequestList";
+//    }
+//    @GetMapping(path = "/transactionRequest", params = "transactionType") //returns results where transaction type not null
+//    public String listTransactionTypes(){
+//        return "transactionRequestList";
+//    }
+//
+//    @GetMapping("/transactionRequest/{transactionId}")
+//    public String viewTransactionRequest(@PathVariable int transactionId){
+//        //refer to transactionId in my implementation
+//
+//        return "transactionRequestDetail";
+//    }
+//
+//    //Model Attributes get form data into your controller methods
+////    @PostMapping("/transactionDetail")
+////    public String updateTransactionRequest(@ModelAttribute TransactionRequest formBean){
+////
+////        //implement a save of all of the form bean information
+////        return "transactionRequestDetail";
+////    }
+//}
